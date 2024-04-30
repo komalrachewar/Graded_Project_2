@@ -1,22 +1,17 @@
 // login.js
-const loginForm = document.getElementById("loginForm");
+const loginForm = document.querySelector(".submitBtn");
 const errorMessage = document.getElementById("errorMessage");
-
-loginForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-
+loginForm.addEventListener("click", submitForm);
+localStorage.setItem("userName", "admin");
+localStorage.setItem("password", "admin");
+function submitForm(e) {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-
-  // Validate username and password (for demonstration purposes, using hardcoded values)
-  if (username === "admin" && password === "password") {
-    localStorage.setItem("isLoggedIn", "true");
-    window.location.href = "resume.html";
-    history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-      history.go(1);
-    };
+  const error = document.querySelector("#errorMessage");
+  if (username === localStorage.getItem("userName") && password === localStorage.getItem("password")) {
+    window.location = "resume.html";
   } else {
-    errorMessage.textContent = "Invalid username/password";
+    error.innerText = "Username or password is invalid, please check.";
   }
-});
+}
+

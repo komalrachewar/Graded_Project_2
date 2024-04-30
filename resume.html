@@ -1,26 +1,126 @@
-<!-- resume.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Page</title>
     <link rel="stylesheet" href="resume.css">
+    <title>Resume</title>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Applicant Details</h1>
-        <div id="applicants"></div>
-        <div class="controls">
-            <button id="prevBtn">Previous</button>
-            <button id="nextBtn">Next</button>
-            <input type="text" id="searchInput" placeholder="Search by job">
-            <button id="searchBtn">Search</button>
-        </div>
-    </div>
-    <script src="resume.js"></script>
-</body>
+    <section>
+        <article class="search_btn">
+            <button class="button" id="prevBtn">Previous</button>
+            <input type="text" id="searchBox" />
+            <button class="button" id="nextBtn">NEXT</button>
+        </article>
+    </section>
+    <section class="rela-block page">
+        <article class="rela-block top-bar">
+            <article id="head" class="abs-center">
+                <div id="name">John Doe</div>
+                <p id="position">Applied for : Software Engineer</p>
+            </article>
+            <article class="resume">
+                <img src="#" alt="Your Photo" class="photo">
+                <!-- Rest of your resume content -->
+            </article>
+        </article>
+        <article class="side-bar">
+            <article class="leftContent">
+                <p class="headStyle">Personal information</p>
+                <article class="left-subhead">
+                    <p>99999999</p>
+                    <p class="email"><a href="#">john@mail.com</a></p>
+                    <p class="linkedIn"><a href="#">Linkedin</a></p>
+                </article>
 
+                <p class="headStyle">Technical Skills</p>
+                <article class="left-subhead">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                </article>
+
+                <p class="headStyle">Hobbies</p>
+                <article class="left-subhead">
+                    <p>WIldlife</p>
+                    <p>Dance</p>
+                    <p>Workout</p>
+                </article>
+            </article>
+        </article>
+        <section class="rela-block content-container">
+            <article class="work">
+                <h2>Work Experience in previous company</h2>
+                    <article class="companyInfo">
+                        <p id="">company Name : Xyz</p>
+                        <p id="">Postion: Xyz</p>
+                        <p id="">Start date: Xyz</p>
+                        <p id="">End date: Xyz</p>
+                    </article>
+
+                    <article class="summary">
+                        "Associate engineer with development, testing verification and
+                        validation experience on Car UI display systems.Performed phone
+                        projection development of user stories and testing with infotainment
+                        system such as Android auto ,Car playAnalyzed requirements , created
+                        test plans, executed test cases for connectivity epic such as
+                        C-connect, F-connect.Good at analyzing DLT logs and analyzing the
+                        code refactor areas."
+                    </article>
+            </article>
+
+            <article class="project">
+                <h2>Projects</h2>
+                <p class="projectDesc">
+                    <span class="pName">Project name</span>: created a GUI using QT designer which will take image
+                    of retina as input, input image will be processed and compare with
+                    the images present in database and then classified as one of DR
+                    stage or normal.OpenCV and image processing concepts are used.
+                    survey paper on this project is publish in 2nd international
+                    conference on Topical Transcend in Science, Technology &
+                    Management. of retina as input, input image will be processed and compare with
+                    the images present in database and then classified as one of DR
+                    stage or normal.OpenCV and image processing concepts are used.
+                    survey paper on this project is publish in 2nd international
+                    conference on Topical Transcend in Science, Technology &
+                    Management.
+                </p>
+            </article>
+            <article class="education">
+                <h2>Education</h2>
+                <ul class="circle-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </article>
+            <article class="internship">
+                <h2>Internship</h2>
+                    <article class="companyInfo">
+                        <p id="">company Name : Xyz</p>
+                        <p id="">Postion: Xyz</p>
+                        <p id="">Start date: Xyz</p>
+                        <p id="">End date: Xyz</p>
+                    </article>
+
+                    <article class="summary">
+                        "Associate engineer with development, testing verification and
+                        validation experience on Car UI display systems.Performed phone
+                        projection development of user stories and testing with infotainment
+                        system such as Android auto ,Car playAnalyzed requirements , created
+                        test plans, executed test cases for connectivity epic such as
+                        C-connect, F-connect.Good at analyzing DLT logs and analyzing the
+                        code refactor areas."
+                    </article>
+            </article>
+            <article class="achievements">
+                <h2>Achievements</h2>
+                <ul class="circle-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </article>
+        </section>
+    </section>
+</body>
 </html>
