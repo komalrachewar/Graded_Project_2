@@ -9,7 +9,8 @@
         <article class="search_btn">
             <button class="button" id="prevBtn">Previous</button>
             <input type="text" id="searchBox" />
-            <button class="button" id="nextBtn">NEXT</button>
+            <button class="button" id="clearBtn">Clear</button>
+            <button class="button" id="nextBtn">Next</button>
         </article>
     </section>
     <section class="rela-block page" id="resultFound" >
@@ -85,12 +86,16 @@
             </article>
         </section>
     </section>
-    <section class="rela-block page" id="noResultFound">
-        <artical class="rela-block top-bar imageSad">
-            <img src="assets/sad_face.png" />
-        </artical>
-        <article class="textMessage">No Data found</article>
+    <section class="rela-block " id="noResultFound">
+        <article class="rela-block-new errorPage">
+            <artical class="imageSad">
+                <img src="assets/sad_face.png" class="imgTag"/>
+            </artical>
+            <article class="textMessage">
+                <p>No such result found</p>
+            </article>
+        </article>
     </section>
-    <script src="resume.js"></script>
+    <script src="resume.js" type="module"></script>
 </body>
 </html>

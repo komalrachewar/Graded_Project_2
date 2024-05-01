@@ -1,4 +1,3 @@
-
 let data = {
 	"resume" : 
 	[ 
@@ -99,7 +98,7 @@ let data = {
 			{
 				"name": "Riya",
 				"AppliedFor": "Software Engineer",
-				"image": "",
+				"image": "assets/dummy_user.jpg",
 				"email": "riya@gmail.com",
 				"phone": "9999999999",
 				"location": 
@@ -560,30 +559,15 @@ let data = {
 		}
 	]		 
 };
-// fetching json data from the file
-// function fetchData() {
-//     fetch("assets/data.json")
-//     .then(res => res.json())
-//     .then(json => {
-//         console.log("inside Data", json.resume);
-//         return json.resume
-//     });
-// };
-// console.log("data", data);
-
-//pending things
-//1. in search buttons are not working fine
-//2. error page
-//3. restict backbutton
-//4. fetch data form file
-
-// actionable elements
+let jsonData = data;
 const searchBox = document.querySelector("#searchBox");
 const nextBtn = document.querySelector("#nextBtn");
 const prevBtn = document.querySelector("#prevBtn");
+const clearBtn = document.querySelector("#clearBtn");
 prevBtn.addEventListener("click", handlePrevBtn);
 nextBtn.addEventListener("click", handleNextBtn);
 searchBox.addEventListener("keypress", searchResume);
+clearBtn.addEventListener("click", clearSearch);
 
 const personName = document.querySelector("#name");
 const position = document.querySelector("#position");
@@ -605,7 +589,7 @@ const internshipSummary = document.querySelector(".internshipSummary")
 let resumIndex = 0;
 loadResumeData(resumIndex);
 function loadResumeData(index) {
-    const resumeItem = data.resume[index];
+    const resumeItem = jsonData.resume[index];
     personName.innerText = resumeItem.basics.name;
     position.innerText = `Applied For : ${resumeItem.basics.AppliedFor}`;
     photo.src = !!resumeItem.basics.image ?resumeItem.basics.image :"assets/user.png";
@@ -625,13 +609,15 @@ function loadResumeData(index) {
 }
 
 function handleNextBtn(e) {
-    if(resumIndex < data.resume.length - 1) {
+    if(resumIndex < jsonData.resume.length - 1) {
         resumIndex++;
         loadResumeData(resumIndex);
     }
-    if(resumIndex == data.resume.length-1) {
+	console.log(resumIndex, jsonData.resume.length - 1);
+    if(resumIndex == jsonData.resume.length - 1) {
         nextBtn.style.visibility = 'hidden';
-    } else if(resumIndex > 0) {
+    } 
+	if(resumIndex >= 0) {
         prevBtn.style.visibility = 'visible';
     }
 }
@@ -641,9 +627,10 @@ function handlePrevBtn(e) {
         resumIndex--;
         loadResumeData(resumIndex);
     }
-    if(resumIndex  ==  data.resume.length-1) {
+    if(resumIndex  ==  jsonData.resume.length-1) {
         nextBtn.style.visibility = 'hidden';
-    } else if (resumIndex <  data.resume.length-1) {
+    } 
+	if (resumIndex <  jsonData.resume.length-1) {
         nextBtn.style.visibility = 'visible';
         if(resumIndex==0) {
             prevBtn.style.visibility = 'hidden';
@@ -651,10 +638,21 @@ function handlePrevBtn(e) {
     } 
 }
 
+function clearSearch(e) {
+	searchBox.value="";
+	jsonData = data;
+	resumIndex = 0;
+	nextBtn.style.visibility = 'visible';
+	prevBtn.style.visibility = 'hidden';
+	document.querySelector("#noResultFound").style.display = "none";
+    document.querySelector("#resultFound").style.display = "block";
+	loadResumeData(resumIndex);
+}
+
 function searchResume(e) {
     if(e.key === "Enter") {
-        searchedData = data.resume.filter((item) => item.skills.keywords.includes(searchBox.value) || item.basics.AppliedFor.toLowerCase() === searchBox.value.toLowerCase() );
-        data = {
+		let searchedData = jsonData.resume.filter((item) => item.skills.keywords.includes(searchBox.value) || item.basics.AppliedFor.toLowerCase() === searchBox.value.toLowerCase() );
+		jsonData = {
             resume : searchedData
         }
         if(searchedData.length === 0) {
@@ -662,7 +660,12 @@ function searchResume(e) {
             document.querySelector("#resultFound").style.display = "none";
             nextBtn.style.visibility = 'hidden';
             prevBtn.style.visibility = 'hidden';
-        } else {
+        } else if(searchedData.length === 1) {
+			nextBtn.style.visibility = 'hidden';
+            prevBtn.style.visibility = 'hidden';
+			resumIndex = 0;
+            loadResumeData(resumIndex);
+		} else {
             resumIndex = 0;
             loadResumeData(resumIndex);
             nextBtn.style.visibility = 'visible';
