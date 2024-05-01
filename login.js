@@ -1,4 +1,3 @@
-// login.js
 const loginForm = document.querySelector(".submitBtn");
 const errorMessage = document.getElementById("errorMessage");
 loginForm.addEventListener("click", submitForm);

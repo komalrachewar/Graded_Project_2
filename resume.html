@@ -12,7 +12,7 @@
             <button class="button" id="nextBtn">NEXT</button>
         </article>
     </section>
-    <section class="rela-block page">
+    <section class="rela-block page" id="resultFound" >
         <article class="rela-block top-bar">
             <article id="head" class="abs-center">
                 <div id="name">John Doe</div>
@@ -27,23 +27,17 @@
             <article class="leftContent">
                 <p class="headStyle">Personal information</p>
                 <article class="left-subhead">
-                    <p>99999999</p>
+                    <p class="phone">99999999</p>
                     <p class="email"><a href="#">john@mail.com</a></p>
                     <p class="linkedIn"><a href="#">Linkedin</a></p>
                 </article>
 
                 <p class="headStyle">Technical Skills</p>
-                <article class="left-subhead">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
+                <article class="left-subhead" id="skills">
                 </article>
 
                 <p class="headStyle">Hobbies</p>
-                <article class="left-subhead">
-                    <p>WIldlife</p>
-                    <p>Dance</p>
-                    <p>Workout</p>
+                <article class="left-subhead" id="hobbies">
                 </article>
             </article>
         </article>
@@ -51,58 +45,27 @@
             <article class="work">
                 <h2>Work Experience in previous company</h2>
                     <article class="companyInfo">
-                        <p id="">company Name : Xyz</p>
-                        <p id="">Postion: Xyz</p>
-                        <p id="">Start date: Xyz</p>
-                        <p id="">End date: Xyz</p>
                     </article>
-
                     <article class="summary">
-                        "Associate engineer with development, testing verification and
-                        validation experience on Car UI display systems.Performed phone
-                        projection development of user stories and testing with infotainment
-                        system such as Android auto ,Car playAnalyzed requirements , created
-                        test plans, executed test cases for connectivity epic such as
-                        C-connect, F-connect.Good at analyzing DLT logs and analyzing the
-                        code refactor areas."
                     </article>
             </article>
 
             <article class="project">
                 <h2>Projects</h2>
                 <p class="projectDesc">
-                    <span class="pName">Project name</span>: created a GUI using QT designer which will take image
-                    of retina as input, input image will be processed and compare with
-                    the images present in database and then classified as one of DR
-                    stage or normal.OpenCV and image processing concepts are used.
-                    survey paper on this project is publish in 2nd international
-                    conference on Topical Transcend in Science, Technology &
-                    Management. of retina as input, input image will be processed and compare with
-                    the images present in database and then classified as one of DR
-                    stage or normal.OpenCV and image processing concepts are used.
-                    survey paper on this project is publish in 2nd international
-                    conference on Topical Transcend in Science, Technology &
-                    Management.
                 </p>
             </article>
             <article class="education">
                 <h2>Education</h2>
-                <ul class="circle-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+                <ul class="circle-list" id="educationData">
                 </ul>
             </article>
             <article class="internship">
                 <h2>Internship</h2>
-                    <article class="companyInfo">
-                        <p id="">company Name : Xyz</p>
-                        <p id="">Postion: Xyz</p>
-                        <p id="">Start date: Xyz</p>
-                        <p id="">End date: Xyz</p>
+                    <article class="internshipCompanyInfo">
                     </article>
 
-                    <article class="summary">
+                    <article class="internshipSummary">
                         "Associate engineer with development, testing verification and
                         validation experience on Car UI display systems.Performed phone
                         projection development of user stories and testing with infotainment
@@ -114,7 +77,7 @@
             </article>
             <article class="achievements">
                 <h2>Achievements</h2>
-                <ul class="circle-list">
+                <ul class="circle-list" id="achievementData">
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
@@ -122,5 +85,12 @@
             </article>
         </section>
     </section>
+    <section class="rela-block page" id="noResultFound">
+        <artical class="rela-block top-bar imageSad">
+            <img src="assets/sad_face.png" />
+        </artical>
+        <article class="textMessage">No Data found</article>
+    </section>
+    <script src="resume.js"></script>
 </body>
 </html>

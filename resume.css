@@ -85,6 +85,16 @@ input {
     visibility: hidden;
 }
 
+#nextBtn{
+    visibility: visible
+}
+#noResultFound{
+    visibility: hidden;
+}
+#resultFound{
+    visibility: visible;
+}
+
 /* h2, h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
@@ -156,25 +166,25 @@ section {
     font-weight: 600;
 }
 .left-subhead{
-    position: relative;
-    left: 145px;
+    /* position: relative;
+    left: 145px; */
     /* right: 0px; */
+    text-align: right;
     line-height: 8.5px;
 }
-.email{
+/* .email{
     position: relative;
-    /* top: -7px; */
     right: 47px;
 }
 .linkedIn{
     position: relative;
     right: -10px;
-}
+} */
 h2{
     margin-left: -32px;
     font-size: 20px;
 }
-.summary{
+.summary, .internshipSummary{
     font-size: 16px;
     line-height: 22px;
     font-weight: 200;
@@ -186,7 +196,7 @@ h2{
     position: relative;
     top: -7px;
 }
-.companyInfo {
+.companyInfo, .internshipCompanyInfo{
     line-height: 12px;
     font-size: 17px;
     font-weight: 200;
@@ -231,6 +241,18 @@ h2{
     border: 2px solid #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+.search_btn{
+    align-content: center;
+    justify-content: center;
+    margin: 0px -11px 0px 20px;
+}
+#searchBox{
+    width: 87%
+}
+/* .phone{
+    position: relative;
+    left: -23px;
+} */
 /* .mugshot {
     position: absolute;
     top: 50px;
