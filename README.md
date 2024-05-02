@@ -8,5 +8,5 @@ After get the result there is a clear button so we can go to the default state.
 
 
 
-To run the Program you to s=run it on server for that you have to install the live server plugin in VS code and open the login.html on server
+To run the Program you have to run it on server for that you have to install the live server plugin in VS code and open the login.html on server
 
