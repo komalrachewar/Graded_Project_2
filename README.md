@@ -6,7 +6,8 @@ We can search by Applied for as well it is not case sensitive.
 After type anything in the search press enter to get the result data otherwise it wont work.
 After get the result there is a clear button so we can go to the default state.
 
+Follow the below commands to run The Program
+- npm install
+- npm start
 
-
-To run the Program you have to run it on server for that you have to install the live server plugin in VS code and open the login.html on server
 
