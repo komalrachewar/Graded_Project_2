@@ -3,7 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: grey;
+  color: #fff;
 }
 
 .container {
@@ -12,14 +13,14 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #dfd33f;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #fff;
 }
 
 label {
@@ -30,7 +31,7 @@ label {
 
 input {
   width: 95%;
-  padding: 8px;
+  padding: 15px 10px 15px 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -41,9 +42,9 @@ input {
 
 button {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   margin-top: 10px;
-  background-color: #007bff;
+  background-color: green;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -51,7 +52,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: green;
 }
 
 .error-message {
@@ -59,3 +60,5 @@ button:hover {
   text-align: center;
   margin-top: 10px;
 }
+
+
